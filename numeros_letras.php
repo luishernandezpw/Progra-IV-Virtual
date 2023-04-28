@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertir Numeros a Letras...</title>
+    <style>
+        /**
+        CSS = Hojas de estilo en cascada... diseño
+        */
+        table{
+            border:1px solid #000000;
+        }
+        table > thead{
+            background-color: black;
+            color:white;
+        }
+        input[type=text]{
+            border: 1px solid blue;
+            height:26px;
+
+        }
+        input[type=submit]{
+            border:1px solid green;
+            background-color: yellow;
+            height:30px;
+            color:black;
+            font-size:16px;
+            padding:5px;
+        }
+    </style>
 </head>
 <body>
     <form action="numeros_letras.php" method="POST">
-        <table border="1" cellpadding="5" cellspacing="0">
+        <table cellpadding="5" cellspacing="0">
             <thead>
                 <tr>
                     <td colspan="2">CONVERTIR NUMEROS A LETRAS * HASTA 100</td>
