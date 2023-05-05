@@ -3,7 +3,7 @@ class Conexion{
     private $conexion, $result, $preparar;
 
     public function __construct($server, $user, $clave){
-        $this->conexion = new PDO($server, $user, $pass, 
+        $this->conexion = new PDO($server, $user, $clave, 
             array(PDO::ATTR_EMULATE_PREPARES=>false,
             PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION)) or die('Nose puede conectar a la BD');
     }
