@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-05-2023 a las 04:56:12
+-- Tiempo de generación: 12-05-2023 a las 03:45:18
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -47,6 +47,29 @@ INSERT INTO `docentes` (`idDocente`, `nombre`, `direccion`, `telefono`, `dui`) V
 (6, 'Mercedes del Carmen', 'Morazan', '2626-4545', '12345678-9'),
 (7, 'Erlinton Isaac Alvarez', 'Usulutan', '4512-6231', '25413687-9');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `idUsuario` int(10) NOT NULL,
+  `usuario` char(25) NOT NULL,
+  `clave` char(100) NOT NULL,
+  `nombre` char(75) NOT NULL,
+  `tipo` char(15) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `usuario`, `clave`, `nombre`, `tipo`) VALUES
+(1, 'carlosugb', '123456', 'Carlos Eduardo Castro', 'administrador'),
+(2, 'luisugb', '123456', 'Luis Enrique Hernandez', 'usuario'),
+(3, 'davidugb', '123456', 'David Guevara', 'administrador');
+
 --
 -- Índices para tablas volcadas
 --
@@ -58,6 +81,12 @@ ALTER TABLE `docentes`
   ADD PRIMARY KEY (`idDocente`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`idUsuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -66,6 +95,12 @@ ALTER TABLE `docentes`
 --
 ALTER TABLE `docentes`
   MODIFY `idDocente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `idUsuario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

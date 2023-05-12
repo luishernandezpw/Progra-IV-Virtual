@@ -93,7 +93,12 @@ include('../seguridad.php');
                             <th>DIRECCION</th>
                             <th>TELEFONO</th>
                             <th>DUI</th>
-                            <th></th>
+                            <th>
+                                <a href="../exportar.php?tipo=pdf" id="btnPdfDocentes" class="btn btn-primary">PDF</a>
+                            </th>
+                            <th>
+                                <a href="../exportar.php?tipo=excel" id="btnExcelDocentes" class="btn btn-primary">EXCEL</a>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
